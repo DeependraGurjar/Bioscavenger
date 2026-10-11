@@ -1,108 +1,113 @@
-# 🌿 BioScavenger
+# BioScavenger
 
-**A screen-free, offline nature quest game. Listen, go outside, explore, and earn Nature Credits.**
+A screen-free, offline nature quest engine. Listen, go outside, explore, and earn Nature Credits.
 
 Built for Hacktoberfest ("Touch the Grass" theme).
 
 ---
 
-## 💡 What is it?
+## Overview
 
-BioScavenger gives you a short scavenger quest as an **audio briefing**. You put your phone away, go outside to find things like leaves, bark, or flowers, then come back and upload a photo as proof.
+BioScavenger delivers a short scavenger quest as an audio briefing. You put your device away, explore the outdoors to find items such as leaves, bark, or flowers, then return and upload a photo as proof.
 
-Everything runs on your own computer. No internet, no accounts, no tracking.
-
----
-
-## ✨ Features
-
-| | |
-|---|---|
-| 🔌 **Fully offline** | Runs on a local AI model, with no cloud and no cost |
-| 🎧 **Audio quests** | Calm voice narration, hands-free |
-| 📸 **Photo proof** | Upload a picture to earn Nature Credits |
-| 🔒 **Private** | No telemetry, no location tracking, no data sent anywhere |
+Everything runs locally on your machine. No internet connection, accounts, or tracking.
 
 ---
 
-## 🧰 Built With
+## Features
 
-| Part | Tool |
+- **Fully offline.** Runs on a local AI model with no cloud services or costs.
+- **Audio quests.** Calm, hands-free voice narration.
+- **Photo proof.** Upload a picture to earn Nature Credits.
+- **Private by design.** No telemetry, no location tracking, no remote data.
+
+---
+
+## Tech Stack
+
+| Component | Technology |
 |---|---|
-| AI model | [Qwen2.5-3B](https://ollama.com/library/qwen2.5) via [Ollama](https://ollama.com) |
-| Voice | [Piper TTS](https://github.com/rhasspy/piper) |
+| Language model | Qwen2.5-3B via [Ollama](https://ollama.com) |
+| Speech synthesis | [Piper TTS](https://github.com/rhasspy/piper) |
 | Interface | Streamlit (Python) |
-| Data format | JSON, turned into game tasks |
+| Data format | JSON, parsed into game tasks |
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### Before you begin
-You need:
-- [Python 3.10+](https://www.python.org/downloads/)
+### Requirements
+
+- Python 3.10 or higher
 - [Ollama](https://ollama.com)
 
-### Step 1: Download the project
+### 1. Clone the repository
+
 ```bash
 git clone https://github.com/<your-username>/BioScavenger.git
 cd BioScavenger
 ```
 
-### Step 2: Install Python packages
+### 2. Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 3: Start the AI model
-Open a **second terminal** and run:
+### 3. Start the language model
+
+In a separate terminal:
+
 ```bash
 ollama run qwen2.5:3b
 ```
 
-### Step 4: Set up the voice (Windows)
-1. Download the Windows release of [Piper TTS](https://github.com/rhasspy/piper).
-2. Download the voice files `en_US-lessac-medium.onnx` and its `.json` file.
-3. Put `piper.exe` and the voice files in the **main project folder**.
+### 4. Set up Piper TTS (Windows)
 
-### Step 5: Run the app
+1. Download the Windows release of [Piper TTS](https://github.com/rhasspy/piper).
+2. Download the voice model `en_US-lessac-medium.onnx` and its `.json` config file.
+3. Place `piper.exe` and the voice files in the project root folder.
+
+### 5. Launch the app
+
 ```bash
 python -m streamlit run app.py
 ```
-Then open **http://localhost:8501** in your browser.
+
+Open `http://localhost:8501` in your browser.
 
 ---
 
-## 🎮 How to Play
+## How to Play
 
 1. Click **Generate Quest**.
 2. Listen to the audio briefing.
-3. Put your device away and go outside.
-4. Find the items from the quest.
+3. Put your device away and head outside.
+4. Find the items described in the quest.
 5. Upload a photo as proof.
-6. Earn **Nature Credits**. 🌱
+6. Earn Nature Credits.
 
 ---
 
-## 📁 Project Files
+## Project Structure
 
 ```
 BioScavenger/
-├── app.py            ← main app
-├── requirements.txt  ← Python packages
-├── piper.exe         ← voice engine (you download this)
-└── *.onnx / *.json   ← voice model (you download this)
+  app.py              Main application
+  requirements.txt    Python dependencies
+  piper.exe           Piper TTS binary (download separately)
+  *.onnx, *.json      Voice model files (download separately)
 ```
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome, especially during Hacktoberfest!
+Contributions are welcome.
 
-1. Fork this repo
-2. Create a branch
-3. Make your changes
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
 4. Open a pull request
 
-**Ideas:** new quest themes, more voices, Linux/Mac setup instructions.
+Suggested areas: new quest themes, additional voice models, and Linux/macOS setup instructions.
