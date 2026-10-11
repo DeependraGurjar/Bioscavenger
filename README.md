@@ -44,7 +44,7 @@ Everything runs locally on your machine. No internet connection, accounts, or tr
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/BioScavenger.git
+git clone https://github.com/DeependraGurjar/BioScavenger.git
 cd BioScavenger
 ```
 
